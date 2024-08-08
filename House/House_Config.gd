@@ -15,3 +15,18 @@ class_name House_Config
 		for w in walls:
 			w.changed.connect(emit_changed)
 		emit_changed()
+
+@export var floors : Array[Floor_Config] :
+	set(value):
+		floors = value
+		for f in floors:
+			f.changed.connect(emit_changed)
+		emit_changed()
+	
+@export var ceilings : Array[Floor_Config] :
+	set(value):
+		ceilings = value
+		for c in ceilings:
+			c.changed.connect(emit_changed)
+		emit_changed()
+	

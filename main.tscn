@@ -22,4 +22,9 @@ material = ExtResource("1_ftb8n")
 transform = Transform3D(1, 0, 0, 0, 0.153176, 0.988199, 0, -0.988199, 0.153176, 0, 22.6083, 0)
 environment = SubResource("Environment_yr4y3")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.19175, 0)
+omni_range = 11.408
+omni_attenuation = 0.0544094
+
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

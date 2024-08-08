@@ -17,12 +17,15 @@ func _ready():
 	build()
 
 func build():
-	print("building")
 	clean_house()
 	for p in house_config.pillars:
 		build_pillar(p)
 	for w in house_config.walls:
 		build_wall(w)
+	for f in house_config.floors:
+		build_floor(f)
+	for c in house_config.ceilings:
+		build_ceiling(c)
 		
 func clean_house():
 	for child in $House.get_children():
@@ -66,6 +69,35 @@ func build_wall(wall_config:Wall_Config):
 		wall.add_child(cutout)
 		wall.add_child(window)
 	$House.add_child(wall)
+
+func build_floor(floor_config:Floor_Config):
+	var floor = CSGPolygon3D.new()
+	floor.material = floor_config.material
+	floor.depth = floor_config.thickness
+	floor.rotation.x = PI/2
+	var floor_poly = PackedVector2Array()
+	var height = house_config.pillars[floor_config.perimeter[0]].position.y
+	for pillar_id in floor_config.perimeter:
+		var pillar = house_config.pillars[pillar_id]
+		floor_poly.append(Vector2(pillar.position.x,pillar.position.z))
+		if height < pillar.position.y: #get the highest pillar position, so floor will be on stilts if eneven
+			height =  pillar.position.y
+	floor.polygon = floor_poly #cant append directly to polygon
+	floor.position.y = height	
+	$House.add_child(floor)
+	return floor
+
+func build_ceiling(ceiling_config:Floor_Config):
+	var ceiling = build_floor(ceiling_config)
+	var first_pillar = house_config.pillars[ceiling_config.perimeter[0]]
+	var height = first_pillar.position.y + first_pillar.height - ceiling_config.thickness -.001
+	for pillar_id in ceiling_config.perimeter:
+		var pillar = house_config.pillars[pillar_id]
+		var curr_height = pillar.position.y + pillar.height - ceiling_config.thickness -.001
+		if height > curr_height: #get the lowest top position, so ceiling wont be floating if uneven
+			height =  curr_height
+	ceiling.position.y = height
+	
 
 func _on_visibility_changed():
 	build()
