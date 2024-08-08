@@ -1,6 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cr0pyia4tfjfo"]
-
-[ext_resource type="Texture2D" uid="uid://ducn7kehdh72k" path="res://Material/Stucco/white_stucco.png" id="1_12t72"]
-
-[resource]
-albedo_texture = ExtResource("1_12t72")
