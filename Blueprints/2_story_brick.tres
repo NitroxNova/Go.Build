@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="House_Config" load_steps=39 format=3 uid="uid://b7ujqot6l8ijp"]
+[gd_resource type="Resource" script_class="House_Config" load_steps=41 format=3 uid="uid://b7ujqot6l8ijp"]
 
 [ext_resource type="Material" uid="uid://cr0pyia4tfjfo" path="res://Material/Stucco/white_stucco.tres" id="1_e3sie"]
 [ext_resource type="Material" uid="uid://dcjxc15k81xrl" path="res://Material/Bricks/material_3d.tres" id="1_eoadj"]
@@ -49,7 +49,7 @@ material = ExtResource("1_eoadj")
 
 [sub_resource type="Resource" id="Resource_2qkws"]
 script = ExtResource("2_u4dqw")
-position = Vector3(5, 0, -8)
+position = Vector3(8.16099, 0, -6.09891)
 height = 5.0
 width = 1.0
 material = ExtResource("1_eoadj")
@@ -89,15 +89,20 @@ height = 4.0
 width = 0.5
 material = ExtResource("3_ttmps")
 
+[sub_resource type="Resource" id="Resource_bqene"]
+script = ExtResource("7_62fsi")
+horizontal_position = 0.5
+vertical_position = 0.27
+
 [sub_resource type="Resource" id="Resource_7bolp"]
 script = ExtResource("7_62fsi")
-horizontal_position = 0.6
-vertical_position = 0.6
+horizontal_position = 0.75
+vertical_position = 0.5
 
 [sub_resource type="Resource" id="Resource_ia6er"]
 script = ExtResource("7_62fsi")
-horizontal_position = 0.45
-vertical_position = 0.6
+horizontal_position = 0.25
+vertical_position = 0.5
 
 [sub_resource type="Resource" id="Resource_5y214"]
 script = ExtResource("6_xplo5")
@@ -105,6 +110,7 @@ pillar_1 = 0
 pillar_2 = 1
 width = 1.0
 windows = Array[ExtResource("7_62fsi")]([SubResource("Resource_7bolp"), SubResource("Resource_ia6er")])
+doors = Array[ExtResource("7_62fsi")]([SubResource("Resource_bqene")])
 material = ExtResource("1_eoadj")
 inner_material = ExtResource("5_x2wt1")
 
@@ -119,6 +125,7 @@ pillar_1 = 1
 pillar_2 = 2
 width = 1.0
 windows = Array[ExtResource("7_62fsi")]([SubResource("Resource_krea3")])
+doors = Array[ExtResource("7_62fsi")]([])
 material = ExtResource("1_eoadj")
 inner_material = ExtResource("3_ttmps")
 
@@ -128,6 +135,7 @@ pillar_1 = 2
 pillar_2 = 3
 width = 1.0
 windows = Array[ExtResource("7_62fsi")]([])
+doors = Array[ExtResource("7_62fsi")]([])
 material = ExtResource("1_eoadj")
 inner_material = ExtResource("3_ttmps")
 
@@ -142,8 +150,14 @@ pillar_1 = 3
 pillar_2 = 0
 width = 1.0
 windows = Array[ExtResource("7_62fsi")]([SubResource("Resource_soipr")])
+doors = Array[ExtResource("7_62fsi")]([])
 material = ExtResource("1_eoadj")
 inner_material = ExtResource("5_x2wt1")
+
+[sub_resource type="Resource" id="Resource_6asy6"]
+script = ExtResource("7_62fsi")
+horizontal_position = 0.5
+vertical_position = 0.295
 
 [sub_resource type="Resource" id="Resource_tbu1s"]
 script = ExtResource("6_xplo5")
@@ -151,6 +165,7 @@ pillar_1 = 1
 pillar_2 = 3
 width = 0.5
 windows = Array[ExtResource("7_62fsi")]([])
+doors = Array[ExtResource("7_62fsi")]([SubResource("Resource_6asy6")])
 material = ExtResource("3_ttmps")
 inner_material = ExtResource("5_x2wt1")
 
@@ -160,6 +175,7 @@ pillar_1 = 4
 pillar_2 = 5
 width = 1.0
 windows = Array[ExtResource("7_62fsi")]([])
+doors = Array[ExtResource("7_62fsi")]([])
 material = ExtResource("3_ttmps")
 inner_material = ExtResource("5_x2wt1")
 
@@ -184,6 +200,7 @@ pillar_1 = 5
 pillar_2 = 6
 width = 1.0
 windows = Array[ExtResource("7_62fsi")]([SubResource("Resource_rsssu"), SubResource("Resource_l5rjj"), SubResource("Resource_j2bud")])
+doors = Array[ExtResource("7_62fsi")]([])
 material = ExtResource("3_ttmps")
 inner_material = ExtResource("5_x2wt1")
 
@@ -203,6 +220,7 @@ pillar_1 = 6
 pillar_2 = 4
 width = 1.0
 windows = Array[ExtResource("7_62fsi")]([SubResource("Resource_lqpr3"), SubResource("Resource_sbcap")])
+doors = Array[ExtResource("7_62fsi")]([])
 material = ExtResource("3_ttmps")
 inner_material = ExtResource("5_x2wt1")
 

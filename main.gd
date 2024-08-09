@@ -5,6 +5,8 @@ var pillar_scene = preload("res://House/Pillar/pillar.tscn")
 var wall_scene = preload("res://House/Wall/wall.tscn")
 var window_scene = preload("res://House/Window/window.glb")
 var window_cutout_scene = preload("res://House/Window/cut_out.tscn")
+var door_scene = preload("res://House/Window/door.tscn")
+var door_cutout_scene = preload("res://House/Window/cut_out_door.tscn")
 
 @export var house_config : House_Config :
 	set(value):
@@ -13,14 +15,19 @@ var window_cutout_scene = preload("res://House/Window/cut_out.tscn")
 		house_config.changed.connect(build)
 		build()
 
+var t0 : float
+var cont : int
+
 func _ready():
 	build()
 
 func build():
+	t0 = Time.get_ticks_msec()
 	if is_inside_tree() and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		clean_house()
 		for p_id in house_config.pillars.size():
 			build_pillar(p_id)
+		cont = 0
 		for w in house_config.walls:
 			build_wall(w)
 		for f in house_config.floors:
@@ -29,6 +36,8 @@ func build():
 			build_ceiling(c)
 	for mesh in $House.get_children():
 		mesh.owner = self
+	
+	print("build in: " + str(Time.get_ticks_msec() - t0) + " msecs.")
 		
 func clean_house():
 	for child in $House.get_children():
@@ -44,6 +53,8 @@ func build_pillar(p_id:int):
 	pillar.set_material(p_config.material)
 	$House.add_child(pillar)
 	pillar.transform_changed.connect(pillar_transform_changed)
+	pillar.name = "Pillar_" + str(p_id) + "   ; p   " + str(randi_range(0, 25))
+	#pillar.owner = $House.owner
 
 func pillar_transform_changed(pillar_id:int,pos:Vector3):
 	#print("pillar transform change " + str(pillar_id))
@@ -78,7 +89,21 @@ func build_wall(wall_config:Wall_Config):
 		cutout.material = wall_config.material
 		wall.add_child(cutout)
 		wall.add_child(window)
+	for d in wall_config.doors:
+		var door = door_scene.instantiate()
+		var cutout = door_cutout_scene.instantiate()
+		var door_y = d.vertical_position * height
+		var door_z = (d.horizontal_position - 0.5) * length
+		var door_position = Vector3(0,door_y,door_z)
+		door.position = door_position
+		cutout.position = door_position
+		cutout.material = wall_config.material
+		wall.add_child(cutout)
+		wall.add_child(door)
 	$House.add_child(wall)
+	wall.name = "Wall_" + str(cont) + "   <3   " + str(randi_range(0, 25))
+	cont += 1
+	
 
 func build_floor(floor_config:Floor_Config):
 	var floor = CSGPolygon3D.new()
@@ -93,7 +118,7 @@ func build_floor(floor_config:Floor_Config):
 		if height < pillar.position.y: #get the highest pillar position, so floor will be on stilts if eneven
 			height =  pillar.position.y
 	floor.polygon = floor_poly #cant append directly to polygon
-	floor.position.y = height	
+	floor.position.y = height
 	$House.add_child(floor)
 	return floor
 

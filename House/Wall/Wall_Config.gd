@@ -24,7 +24,13 @@ class_name Wall_Config
 		for w in windows:
 			w.changed.connect(emit_changed)
 		emit_changed()
-	
+
+@export var doors : Array[Window_Config] :
+	set(value):
+		doors = value
+		for d in doors:
+			d.changed.connect(emit_changed)
+		emit_changed()	
 
 @export var material : StandardMaterial3D:
 	set(value):
