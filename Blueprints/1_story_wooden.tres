@@ -45,7 +45,7 @@ material = ExtResource("4_q811r")
 
 [sub_resource type="Resource" id="Resource_uqchc"]
 script = ExtResource("2_rlphy")
-position = Vector3(-5, 0, 5)
+position = Vector3(-4.94248, -0.0532467, 4.952)
 height = 5.0
 width = 1.0
 material = ExtResource("4_q811r")

@@ -17,10 +17,10 @@ func _ready():
 	build()
 
 func build():
-	if is_inside_tree():
+	if is_inside_tree() and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		clean_house()
-		for p in house_config.pillars:
-			build_pillar(p)
+		for p_id in house_config.pillars.size():
+			build_pillar(p_id)
 		for w in house_config.walls:
 			build_wall(w)
 		for f in house_config.floors:
@@ -34,13 +34,20 @@ func clean_house():
 	for child in $House.get_children():
 		child.queue_free()
 
-func build_pillar(p_config):
+func build_pillar(p_id:int):
 	var pillar = pillar_scene.instantiate()
+	pillar.pillar_id = p_id
+	var p_config:Pillar_Config = house_config.pillars[p_id]
 	pillar.set_position(p_config.position)
 	pillar.set_height(p_config.height)
 	pillar.set_width(p_config.width)
 	pillar.set_material(p_config.material)
 	$House.add_child(pillar)
+	pillar.transform_changed.connect(pillar_transform_changed)
+
+func pillar_transform_changed(pillar_id:int,pos:Vector3):
+	#print("pillar transform change " + str(pillar_id))
+	house_config.pillars[pillar_id].position = pos
 	
 func build_wall(wall_config:Wall_Config):
 	var wall = wall_scene.instantiate()
