@@ -78,13 +78,13 @@ inner_material = ExtResource("6_v1o6s")
 
 [sub_resource type="Resource" id="Resource_sflk3"]
 script = ExtResource("7_o7au7")
-horizontal_position = 0.4
-vertical_position = 0.7
+horizontal_position = 0.245
+vertical_position = 0.595
 
 [sub_resource type="Resource" id="Resource_wrr3l"]
 script = ExtResource("7_o7au7")
-horizontal_position = 0.6
-vertical_position = 0.7
+horizontal_position = 0.675
+vertical_position = 0.595
 
 [sub_resource type="Resource" id="Resource_dslxt"]
 script = ExtResource("5_8xgmm")

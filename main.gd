@@ -17,15 +17,18 @@ func _ready():
 	build()
 
 func build():
-	clean_house()
-	for p in house_config.pillars:
-		build_pillar(p)
-	for w in house_config.walls:
-		build_wall(w)
-	for f in house_config.floors:
-		build_floor(f)
-	for c in house_config.ceilings:
-		build_ceiling(c)
+	if is_inside_tree():
+		clean_house()
+		for p in house_config.pillars:
+			build_pillar(p)
+		for w in house_config.walls:
+			build_wall(w)
+		for f in house_config.floors:
+			build_floor(f)
+		for c in house_config.ceilings:
+			build_ceiling(c)
+	for mesh in $House.get_children():
+		mesh.owner = self
 		
 func clean_house():
 	for child in $House.get_children():
