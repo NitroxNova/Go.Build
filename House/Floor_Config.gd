@@ -16,4 +16,8 @@ class_name Floor_Config
 	set(value):
 		material = value
 		emit_changed()
-		
+
+@export var scale: float = 1.0:
+	set(value):
+		scale = value
+		emit_changed()

@@ -1,7 +1,12 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bi4o5cqdj3n2x"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bi4o5cqdj3n2x"]
 
 [ext_resource type="Texture2D" uid="uid://dni2ermjupetm" path="res://Material/Blue_Stripes/wallpaper.png" id="1_wa8n1"]
+[ext_resource type="Texture2D" uid="uid://c0aix54wab4kd" path="res://Material/Normals/FastNoise.tres" id="2_t0cjr"]
 
 [resource]
 albedo_texture = ExtResource("1_wa8n1")
+metallic = 0.3
+roughness = 0.7
+normal_enabled = true
+normal_texture = ExtResource("2_t0cjr")
 uv1_triplanar = true

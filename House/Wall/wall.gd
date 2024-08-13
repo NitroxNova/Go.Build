@@ -1,15 +1,21 @@
 @tool
 extends CSGCombiner3D
+class_name Wall
+
+@export var wall_config : Wall_Config
+
+var w_id := 0
 
 func set_length(length:float):
 	$Mesh.size.z = length
 	$Inner.size.z = length
 	
 func set_height(height:float):
-	$Mesh.size.y = height
-	$Mesh.position.y = height/2
-	$Inner.size.y = height
-	$Inner.position.y = height/2
+	var y_size = height * wall_config.proportional_height
+	$Mesh.size.y = y_size
+	$Mesh.position.y = y_size/2
+	$Inner.size.y = y_size
+	$Inner.position.y = y_size/2
 	
 func set_width(width:float):
 	$Mesh.size.x = width

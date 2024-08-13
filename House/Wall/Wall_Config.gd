@@ -16,6 +16,11 @@ class_name Wall_Config
 	set(value):
 		width = value
 		emit_changed()
+
+@export var proportional_height : float = 0.995:
+	set(value):
+		proportional_height = value
+		emit_changed()
 	
 
 @export var windows : Array[Window_Config] :
@@ -30,7 +35,14 @@ class_name Wall_Config
 		doors = value
 		for d in doors:
 			d.changed.connect(emit_changed)
-		emit_changed()	
+		emit_changed()
+		
+@export var wall_details : Array[Wall_Detail_Config]:
+	set(value):
+		wall_details = value
+		for wd in wall_details:
+			wd.changed.connect(emit_changed)
+		emit_changed()
 
 @export var material : StandardMaterial3D:
 	set(value):

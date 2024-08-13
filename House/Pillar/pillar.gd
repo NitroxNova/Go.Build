@@ -1,7 +1,10 @@
 @tool
 extends Node3D
+class_name Pillar
 var pillar_id : int
 signal transform_changed
+
+@export var pillar_config : Pillar_Config
 
 func _ready():
 	set_notify_transform(true)

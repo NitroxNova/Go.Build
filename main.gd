@@ -12,14 +12,16 @@ var door_cutout_scene = preload("res://House/Window/cut_out_door.tscn")
 	set(value):
 		print("config changed")
 		house_config = value
-		house_config.changed.connect(build)
-		build()
+		#house_config.changed.connect(build)
+		#build()
 
 var t0 : float
 var cont : int
+var last_pid : Array[int] = []
 
 func _ready():
-	build()
+	#build()
+	pass
 
 func build():
 	t0 = Time.get_ticks_msec()
@@ -27,6 +29,7 @@ func build():
 		clean_house()
 		for p_id in house_config.pillars.size():
 			build_pillar(p_id)
+		last_pid.clear()
 		cont = 0
 		for w in house_config.walls:
 			build_wall(w)
@@ -34,8 +37,10 @@ func build():
 			build_floor(f)
 		for c in house_config.ceilings:
 			build_ceiling(c)
-	for mesh in $House.get_children():
-		mesh.owner = self
+	var h = $House
+	if h != null:
+		for mesh in $House.get_children():
+			mesh.owner = self
 	
 	print("build in: " + str(Time.get_ticks_msec() - t0) + " msecs.")
 		
@@ -47,21 +52,29 @@ func build_pillar(p_id:int):
 	var pillar = pillar_scene.instantiate()
 	pillar.pillar_id = p_id
 	var p_config:Pillar_Config = house_config.pillars[p_id]
+	pillar.pillar_config = p_config
 	pillar.set_position(p_config.position)
 	pillar.set_height(p_config.height)
 	pillar.set_width(p_config.width)
 	pillar.set_material(p_config.material)
 	$House.add_child(pillar)
 	pillar.transform_changed.connect(pillar_transform_changed)
-	pillar.name = "Pillar_" + str(p_id) + "   ; p   " + str(randi_range(0, 25))
+	pillar.name = "Pillar_" + str(p_id) + "_" + str(pillar.position) +"   ; p   " + str(randi_range(0, 25))
+	if last_pid.size() > 0  and last_pid.has(p_id): # keep pillar selected.
+		var selection = EditorInterface.get_selection()
+		selection.add_node(pillar)
+		last_pid.erase(p_id)
+		
 	#pillar.owner = $House.owner
 
 func pillar_transform_changed(pillar_id:int,pos:Vector3):
-	#print("pillar transform change " + str(pillar_id))
+	last_pid.append(pillar_id)
 	house_config.pillars[pillar_id].position = pos
-	
+
+
 func build_wall(wall_config:Wall_Config):
 	var wall = wall_scene.instantiate()
+	wall.wall_config = wall_config
 	var pillar_1 = house_config.pillars[wall_config.pillar_1]
 	var pillar_2 = house_config.pillars[wall_config.pillar_2]
 	wall.position = (pillar_1.position + pillar_2.position) / 2

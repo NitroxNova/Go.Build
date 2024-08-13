@@ -5,6 +5,7 @@
 [ext_resource type="Material" uid="uid://wb7b12htur4g" path="res://Material/Planks/material_3d.tres" id="3_y60ui"]
 
 [node name="Wall" type="CSGCombiner3D"]
+use_collision = true
 script = ExtResource("1_wtsx1")
 
 [node name="Mesh" type="CSGBox3D" parent="."]

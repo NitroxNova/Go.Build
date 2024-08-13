@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://ctldtf7s0t7fr"]
+
+[ext_resource type="Texture2D" uid="uid://2lh18ip7ohe2" path="res://Material/BricksRock/Bricks075A_1K-JPG_Color.jpg" id="1_aqccn"]
+[ext_resource type="Texture2D" uid="uid://cvqmlxnfc62r6" path="res://Material/BricksRock/Bricks075A_1K-JPG_AmbientOcclusion.jpg" id="2_umyjt"]
+[ext_resource type="Texture2D" uid="uid://b1j246atasvrm" path="res://Material/BricksRock/Bricks075A_1K-JPG_NormalGL.jpg" id="3_oc73r"]
+[ext_resource type="Texture2D" uid="uid://7u7fd8popovf" path="res://Material/BricksRock/Bricks075A_1K-JPG_Roughness.jpg" id="4_wyflk"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cbti5"]
+
+[resource]
+albedo_texture = ExtResource("1_aqccn")
+metallic = 0.5
+roughness_texture = ExtResource("4_wyflk")
+normal_enabled = true
+normal_texture = ExtResource("3_oc73r")
+ao_enabled = true
+ao_light_affect = 0.5
+ao_texture = ExtResource("2_umyjt")
+heightmap_scale = 8.246
+heightmap_texture = SubResource("CompressedTexture2D_cbti5")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true

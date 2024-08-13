@@ -1,93 +1,100 @@
-[gd_scene load_steps=11 format=3 uid="uid://bkpvb33dmrm0j"]
+[gd_scene load_steps=15 format=3 uid="uid://bkpvb33dmrm0j"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_3q6pv"]
 [ext_resource type="Material" uid="uid://l2jolkvknn8b" path="res://Material/Grass/material_3d.tres" id="1_ftb8n"]
-[ext_resource type="Resource" uid="uid://dkj4jal2ug7rh" path="res://Blueprints/1_story_wooden.tres" id="2_y8u0a"]
-[ext_resource type="PackedScene" uid="uid://b2cgg0gehx5sy" path="res://House/Pillar/pillar.tscn" id="4_fhtln"]
-[ext_resource type="Script" path="res://House/Pillar/pillar.gd" id="5_8hnxr"]
-[ext_resource type="PackedScene" uid="uid://dnwereidlvrc8" path="res://House/Wall/wall.tscn" id="6_tsp63"]
-[ext_resource type="Script" path="res://House/Wall/wall.gd" id="7_pyeh0"]
-[ext_resource type="Material" uid="uid://dcjxc15k81xrl" path="res://Material/Bricks/material_3d.tres" id="9_q7pkc"]
-[ext_resource type="Material" uid="uid://cr0pyia4tfjfo" path="res://Material/Stucco/white_stucco.tres" id="10_lfyxc"]
+[ext_resource type="Script" path="res://House/house_editor.gd" id="4_1w18o"]
+[ext_resource type="Resource" uid="uid://db8kjcoxxwm4v" path="res://Blueprints/basics/gazebo.tres" id="5_8f7lk"]
+[ext_resource type="Resource" uid="uid://dkj4jal2ug7rh" path="res://Blueprints/1_story_wooden.tres" id="5_72lef"]
+[ext_resource type="Resource" uid="uid://b7ujqot6l8ijp" path="res://Blueprints/2_story_brick.tres" id="6_nbkwn"]
+[ext_resource type="PackedScene" uid="uid://ilgxwhp62rjo" path="res://Furniture/bed_double_A.gltf" id="7_3wovg"]
+[ext_resource type="PackedScene" uid="uid://ke3rfm2kesb4" path="res://Furniture/bed_double_B.gltf" id="8_at0ij"]
+[ext_resource type="PackedScene" uid="uid://drg30nt3vga1r" path="res://Furniture/couch.gltf" id="10_flob2"]
+[ext_resource type="PackedScene" uid="uid://jvaafqfhp84f" path="res://Furniture/lamp_standing.gltf" id="11_if7pe"]
+[ext_resource type="PackedScene" uid="uid://dwxa5yto3urf" path="res://Furniture/couch_pillows.gltf" id="12_1ha7i"]
+[ext_resource type="PackedScene" uid="uid://cbxv3n2lfwom1" path="res://Furniture/armchair.gltf" id="13_kphux"]
+[ext_resource type="PackedScene" uid="uid://bsn62ssxy77fb" path="res://Furniture/armchair_pillows.gltf" id="14_bvar2"]
+[ext_resource type="PackedScene" uid="uid://budin5eprqfba" path="res://Furniture/cabinet_small_decorated.gltf" id="14_vuffu"]
 
 [sub_resource type="Environment" id="Environment_yr4y3"]
 background_energy_multiplier = 16.0
 
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226522, -0.180775, -0.00744724)
-script = ExtResource("1_3q6pv")
-house_config = ExtResource("2_y8u0a")
-
-[node name="Grass" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-size = Vector3(50, 1, 50)
-material = ExtResource("1_ftb8n")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.153176, 0.988199, 0, -0.988199, 0.153176, 0, 22.6083, 0)
+transform = Transform3D(0.0422534, -0.747762, 0.662621, 0, 0.663213, 0.748431, -0.999107, -0.0316237, 0.028023, 26.6823, 22.9104, -0.207723)
 environment = SubResource("Environment_yr4y3")
 
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.53798, 1.97728, -1.99666)
+shadow_enabled = true
+shadow_blur = 9.514
+omni_range = 25.0
+omni_attenuation = 0.517632
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(0.970232, 0, 0.242176, 0, 1, 0, -0.242176, 0, 0.970232, -1.47697, 6.77069, -35.7581)
+omni_range = 25.0
+omni_attenuation = 0.517632
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.88822, 2.19175, -2.61353)
+visible = false
+omni_range = 25.0
+omni_attenuation = 0.517632
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.19543, 1.92251, -0.922206)
+size = Vector3(50, 20, 50)
+enable_shadows = true
+
+[node name="Furniture test" type="Node3D" parent="."]
+
+[node name="bed_double_A2" parent="Furniture test" instance=ExtResource("7_3wovg")]
+transform = Transform3D(1.19816, 0, 0.356232, 0, 1.25, 0, -0.356232, 0, 1.19816, 1.11812, 5.0711, -35.7145)
+
+[node name="bed_double_B2" parent="Furniture test" instance=ExtResource("8_at0ij")]
+transform = Transform3D(-0.142393, 0, 1.24186, 0, 1.25, 0, -1.24186, 0, -0.142393, -4.71921, 0.0641343, -4.59516)
+
+[node name="couch2" parent="Furniture test" instance=ExtResource("10_flob2")]
+transform = Transform3D(-0.134107, 0, 0.990967, 0, 1, 0, -0.990967, 0, -0.134107, -5.41231, 0.0839906, 0.114927)
+
+[node name="lamp_standing2" parent="Furniture test" instance=ExtResource("11_if7pe")]
+transform = Transform3D(0.991554, 0, 0.129696, 0, 1, 0, -0.129696, 0, 0.991554, -5.58698, 0.180775, -2.00851)
+
+[node name="lamp_standing3" parent="Furniture test" instance=ExtResource("11_if7pe")]
+transform = Transform3D(0.930629, 0, 0.365965, 0, 1, 0, -0.365965, 0, 0.930629, -1.51679, 5.08298, -35.7153)
+
+[node name="couch_pillows2" parent="Furniture test" instance=ExtResource("12_1ha7i")]
+transform = Transform3D(0.978646, 0, -0.205555, 0, 1, 0, 0.205555, 0, 0.978646, 3.7709, 0.180775, -11.5003)
+
+[node name="armchair2" parent="Furniture test" instance=ExtResource("13_kphux")]
+transform = Transform3D(-0.0790155, 0, 0.996874, 0, 1, 0, -0.996874, 0, -0.0790155, -6.27617, 0.102256, -8.78112)
+
+[node name="armchair_pillows2" parent="Furniture test" instance=ExtResource("14_bvar2")]
+transform = Transform3D(-0.224373, 0, -0.974503, 0, 1, 0, 0.974503, 0, -0.224373, 5.6951, 0.086681, -8.50763)
+
+[node name="cabinet_small_decorated2" parent="Furniture test" instance=ExtResource("14_vuffu")]
+transform = Transform3D(-0.108329, 0, 0.994115, 0, 1, 0, -0.994115, 0, -0.108329, -6.41402, 0.0163339, -7.06505)
+
+[node name="Grass" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0310969, -0.514937, 0.420666)
+use_collision = true
+size = Vector3(50, 1, 150)
+material = ExtResource("1_ftb8n")
+
 [node name="House" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0483704)
+script = ExtResource("4_1w18o")
+house_config = ExtResource("5_72lef")
 
-[node name="Pillar_0   ; p   8" type="Node3D" parent="House" instance=ExtResource("4_fhtln")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5107, 0, 7.74006)
-script = ExtResource("5_8hnxr")
+[node name="House2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50)
+script = ExtResource("4_1w18o")
+house_config = ExtResource("5_8f7lk")
 
-[node name="Pillar_1   ; p   18" type="Node3D" parent="House" instance=ExtResource("4_fhtln")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.34135, 0, -9.09137)
-script = ExtResource("5_8hnxr")
-
-[node name="Pillar_2   ; p   2" type="Node3D" parent="House" instance=ExtResource("4_fhtln")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.13479, 0, -15.2724)
-script = ExtResource("5_8hnxr")
-
-[node name="Pillar_3   ; p   24" type="Node3D" parent="House" instance=ExtResource("4_fhtln")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57795, -0.0532467, 11.1013)
-script = ExtResource("5_8hnxr")
-
-[node name="Pillar_4   ; p   2" type="Node3D" parent="House" instance=ExtResource("4_fhtln")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6948, -9.53674e-07, 17.2663)
-script = ExtResource("5_8hnxr")
-
-[node name="Pillar_5   ; p   7" type="Node3D" parent="House" instance=ExtResource("4_fhtln")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8827, 0, 15.8261)
-script = ExtResource("5_8hnxr")
-
-[node name="Wall_0   ; p   16" type="CSGCombiner3D" parent="House" instance=ExtResource("6_tsp63")]
-transform = Transform3D(-0.878146, 0, -0.478393, 0, 1, 0, 0.478393, 0, -0.878146, 9.92604, 0, -0.675654)
-script = ExtResource("7_pyeh0")
-
-[node name="Wall_1   ; p   9" type="CSGCombiner3D" parent="House" instance=ExtResource("6_tsp63")]
-transform = Transform3D(-0.416904, 0, -0.908951, 0, 1, 0, 0.908951, 0, -0.416904, -1.39672, 0, -12.1819)
-script = ExtResource("7_pyeh0")
-
-[node name="Wall_2   ; p   8" type="CSGCombiner3D" parent="House" instance=ExtResource("6_tsp63")]
-transform = Transform3D(0.995332, 0, 0.0965149, 0, 1, 0, -0.0965149, 0, 0.995332, -6.85637, -0.0266233, -2.08557)
-script = ExtResource("7_pyeh0")
-
-[node name="Wall_3   ; p   12" type="CSGCombiner3D" parent="House" instance=ExtResource("6_tsp63")]
-transform = Transform3D(-0.165023, 0, 0.98629, 0, 1, 0, -0.98629, 0, -0.165023, 4.46638, -0.0266233, 9.42066)
-script = ExtResource("7_pyeh0")
-
-[node name="Wall_4   ; p   10" type="CSGCombiner3D" parent="House" instance=ExtResource("6_tsp63")]
-transform = Transform3D(-0.05622, 0, 0.998418, 0, 1, 0, -0.998418, 0, -0.05622, 2.09393, -4.76837e-07, 16.5462)
-script = ExtResource("7_pyeh0")
-
-[node name="@CSGPolygon3D@32486" type="CSGPolygon3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-polygon = PackedVector2Array(14.5107, 7.74006, 5.34135, -9.09137, -8.13479, -15.2724, -5.57795, 11.1013)
-depth = 0.1
-material = ExtResource("9_q7pkc")
-
-[node name="@CSGPolygon3D@32487" type="CSGPolygon3D" parent="House"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4.84575, 0)
-polygon = PackedVector2Array(14.5107, 7.74006, 5.34135, -9.09137, -8.13479, -15.2724, -5.57795, 11.1013)
-depth = 0.1
-material = ExtResource("10_lfyxc")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.19175, 0)
-omni_range = 11.408
-omni_attenuation = 0.0544094
-
-[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[node name="House3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.307686, 3.8147e-06, -30.6748)
+script = ExtResource("4_1w18o")
+house_config = ExtResource("6_nbkwn")

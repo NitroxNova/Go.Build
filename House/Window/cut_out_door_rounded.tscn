@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqmcu4jvd81g5"]
+
+[ext_resource type="Material" uid="uid://dcjxc15k81xrl" path="res://Material/Bricks/material_3d.tres" id="1_p2vty"]
+
+[node name="Cut_Out_Door" type="CSGCombiner3D"]
+operation = 2
+
+[node name="CSGCombiner3D" type="CSGBox3D" parent="."]
+size = Vector3(1.8, 2.8, 1.6)
+material = ExtResource("1_p2vty")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 1.38877, 0)
+radius = 0.8
+height = 1.8
+sides = 10
+material = ExtResource("1_p2vty")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dy7v4diya6rc2"]
+[gd_scene load_steps=7 format=3 uid="uid://d1fgcxgk373wa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tswgk"]
 resource_name = "Wood"
@@ -107,6 +107,6 @@ mesh = SubResource("ArrayMesh_6wmgx")
 skeleton = NodePath("")
 
 [node name="DoorIntern" type="MeshInstance3D" parent="Door"]
-transform = Transform3D(0.595538, 0, -0.803327, 0, 1, 0, 0.803327, 0, 0.595538, 0, -0.67283, -0.615251)
+transform = Transform3D(0.278455, 0, -0.960449, 0, 1, 0, 0.960449, 0, 0.278455, 0, -0.67283, -0.615251)
 mesh = SubResource("ArrayMesh_cj07r")
 skeleton = NodePath("")

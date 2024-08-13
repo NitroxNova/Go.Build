@@ -1,0 +1,158 @@
+[gd_resource type="Resource" script_class="House_Config" load_steps=26 format=3 uid="uid://b4f81qqkoik"]
+
+[ext_resource type="Script" path="res://House/Floor_Config.gd" id="1_6sx8u"]
+[ext_resource type="Script" path="res://House/Pillar/Pillar_Config.gd" id="2_38m7j"]
+[ext_resource type="Script" path="res://House/House_Config.gd" id="3_nskqo"]
+[ext_resource type="Script" path="res://House/Window/Window_Config.gd" id="4_4kajn"]
+[ext_resource type="Script" path="res://House/Wall/Wall_Config.gd" id="5_qy2xf"]
+
+[sub_resource type="Resource" id="Resource_d86ma"]
+script = ExtResource("1_6sx8u")
+perimeter = PackedInt32Array(0, 4, 2, 3)
+thickness = 0.1
+scale = 1.0
+
+[sub_resource type="Resource" id="Resource_uy5vf"]
+script = ExtResource("1_6sx8u")
+perimeter = PackedInt32Array(2, 3, 5, 6)
+thickness = 0.1
+scale = 1.0
+
+[sub_resource type="Resource" id="Resource_u7utl"]
+script = ExtResource("2_38m7j")
+position = Vector3(11.5, 0, 15)
+height = 3.0
+width = 0.5
+
+[sub_resource type="Resource" id="Resource_kcsca"]
+script = ExtResource("2_38m7j")
+position = Vector3(1.5, 0, 5)
+height = 3.0
+width = 0.5
+
+[sub_resource type="Resource" id="Resource_hwn6h"]
+script = ExtResource("2_38m7j")
+position = Vector3(1.5, 0, -5.5)
+height = 3.0
+width = 0.5
+
+[sub_resource type="Resource" id="Resource_tmqwf"]
+script = ExtResource("2_38m7j")
+position = Vector3(11.5, 0, -15)
+height = 3.0
+width = 0.5
+
+[sub_resource type="Resource" id="Resource_owe2f"]
+script = ExtResource("2_38m7j")
+position = Vector3(1.5, 0, 15)
+height = 3.0
+width = 0.5
+
+[sub_resource type="Resource" id="Resource_mtmb8"]
+script = ExtResource("2_38m7j")
+position = Vector3(-9.5, 0, -15)
+height = 3.0
+width = 0.5
+
+[sub_resource type="Resource" id="Resource_6lk1j"]
+script = ExtResource("2_38m7j")
+position = Vector3(-9.5, 0, -5.5)
+height = 3.0
+width = 0.5
+
+[sub_resource type="Resource" id="Resource_buov4"]
+script = ExtResource("4_4kajn")
+horizontal_position = 0.5
+vertical_position = 0.5
+
+[sub_resource type="Resource" id="Resource_4ttvl"]
+script = ExtResource("4_4kajn")
+horizontal_position = 0.25
+vertical_position = 0.5
+
+[sub_resource type="Resource" id="Resource_qxk5l"]
+script = ExtResource("4_4kajn")
+horizontal_position = 0.75
+vertical_position = 0.5
+
+[sub_resource type="Resource" id="Resource_v5dxr"]
+script = ExtResource("5_qy2xf")
+pillar_1 = 0
+pillar_2 = 3
+width = 1.0
+proportional_height = 0.995
+windows = Array[ExtResource("4_4kajn")]([SubResource("Resource_4ttvl"), SubResource("Resource_qxk5l")])
+doors = Array[ExtResource("4_4kajn")]([SubResource("Resource_buov4")])
+wall_details = Array[Resource("res://House/Window/WallDetail_Config.gd")]([])
+
+[sub_resource type="Resource" id="Resource_rlt6h"]
+script = ExtResource("4_4kajn")
+horizontal_position = 0.5
+vertical_position = 0.5
+
+[sub_resource type="Resource" id="Resource_oykx7"]
+script = ExtResource("5_qy2xf")
+pillar_1 = 1
+pillar_2 = 2
+width = 1.0
+proportional_height = 0.995
+windows = Array[ExtResource("4_4kajn")]([SubResource("Resource_rlt6h")])
+doors = Array[ExtResource("4_4kajn")]([])
+wall_details = Array[Resource("res://House/Window/WallDetail_Config.gd")]([])
+
+[sub_resource type="Resource" id="Resource_4n0w4"]
+script = ExtResource("5_qy2xf")
+pillar_1 = 6
+pillar_2 = 2
+width = 1.0
+proportional_height = 0.995
+windows = Array[ExtResource("4_4kajn")]([])
+doors = Array[ExtResource("4_4kajn")]([])
+wall_details = Array[Resource("res://House/Window/WallDetail_Config.gd")]([])
+
+[sub_resource type="Resource" id="Resource_tw01h"]
+script = ExtResource("5_qy2xf")
+pillar_1 = 6
+pillar_2 = 5
+width = 1.0
+proportional_height = 0.995
+windows = Array[ExtResource("4_4kajn")]([])
+doors = Array[ExtResource("4_4kajn")]([])
+wall_details = Array[Resource("res://House/Window/WallDetail_Config.gd")]([])
+
+[sub_resource type="Resource" id="Resource_ar5b4"]
+script = ExtResource("5_qy2xf")
+pillar_1 = 0
+pillar_2 = 4
+width = 1.0
+proportional_height = 0.995
+windows = Array[ExtResource("4_4kajn")]([])
+doors = Array[ExtResource("4_4kajn")]([])
+wall_details = Array[Resource("res://House/Window/WallDetail_Config.gd")]([])
+
+[sub_resource type="Resource" id="Resource_n2rq2"]
+script = ExtResource("5_qy2xf")
+pillar_1 = 3
+pillar_2 = 5
+width = 1.0
+proportional_height = 0.995
+windows = Array[ExtResource("4_4kajn")]([])
+doors = Array[ExtResource("4_4kajn")]([])
+wall_details = Array[Resource("res://House/Window/WallDetail_Config.gd")]([])
+
+[sub_resource type="Resource" id="Resource_c3bkh"]
+script = ExtResource("5_qy2xf")
+pillar_1 = 1
+pillar_2 = 4
+width = 1.0
+proportional_height = 0.995
+windows = Array[ExtResource("4_4kajn")]([])
+doors = Array[ExtResource("4_4kajn")]([])
+wall_details = Array[Resource("res://House/Window/WallDetail_Config.gd")]([])
+
+[resource]
+script = ExtResource("3_nskqo")
+pillars = Array[ExtResource("2_38m7j")]([SubResource("Resource_u7utl"), SubResource("Resource_kcsca"), SubResource("Resource_hwn6h"), SubResource("Resource_tmqwf"), SubResource("Resource_owe2f"), SubResource("Resource_mtmb8"), SubResource("Resource_6lk1j")])
+walls = Array[ExtResource("5_qy2xf")]([SubResource("Resource_v5dxr"), SubResource("Resource_oykx7"), SubResource("Resource_4n0w4"), SubResource("Resource_tw01h"), SubResource("Resource_ar5b4"), SubResource("Resource_n2rq2"), SubResource("Resource_c3bkh")])
+floors = Array[ExtResource("1_6sx8u")]([SubResource("Resource_d86ma"), SubResource("Resource_uy5vf")])
+ceilings = Array[ExtResource("1_6sx8u")]([])

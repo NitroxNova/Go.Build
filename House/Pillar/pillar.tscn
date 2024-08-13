@@ -7,3 +7,4 @@ script = ExtResource("1_whtra")
 
 [node name="Mesh" type="CSGCylinder3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+use_collision = true

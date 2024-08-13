@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://chrodb0u1a8au"]
+
+[ext_resource type="Texture2D" uid="uid://xtktwqyvoy6" path="res://Furniture/furniturebits_texture.png" id="1_08lj6"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xm3fp"]
+frequency = 0.025
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vlyp6"]
+as_normal_map = true
+noise = SubResource("FastNoiseLite_xm3fp")
+
+[resource]
+resource_name = "furniture_texture"
+albedo_texture = ExtResource("1_08lj6")
+metallic = 0.18
+roughness = 0.55
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = SubResource("NoiseTexture2D_vlyp6")
