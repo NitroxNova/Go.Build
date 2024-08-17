@@ -12,6 +12,7 @@ func _ready():
 func set_height(height:float):
 	$Mesh.height = height
 	$Mesh.position.y = height/2
+
 	
 func set_material(material):
 	$Mesh.material = material
@@ -22,3 +23,4 @@ func set_width(width:float):
 func _notification(notification:int):
 	if(notification == NOTIFICATION_TRANSFORM_CHANGED):
 		transform_changed.emit(pillar_id,position)
+

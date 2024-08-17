@@ -2,7 +2,6 @@
 
 [ext_resource type="Material" uid="uid://l2jolkvknn8b" path="res://Material/Grass/material_3d.tres" id="1_ftb8n"]
 [ext_resource type="Script" path="res://House/house_editor.gd" id="4_1w18o"]
-[ext_resource type="Resource" uid="uid://db8kjcoxxwm4v" path="res://Blueprints/basics/gazebo.tres" id="5_8f7lk"]
 [ext_resource type="Resource" uid="uid://dkj4jal2ug7rh" path="res://Blueprints/1_story_wooden.tres" id="5_72lef"]
 [ext_resource type="Resource" uid="uid://b7ujqot6l8ijp" path="res://Blueprints/2_story_brick.tres" id="6_nbkwn"]
 [ext_resource type="PackedScene" uid="uid://ilgxwhp62rjo" path="res://Furniture/bed_double_A.gltf" id="7_3wovg"]
@@ -10,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://drg30nt3vga1r" path="res://Furniture/couch.gltf" id="10_flob2"]
 [ext_resource type="PackedScene" uid="uid://jvaafqfhp84f" path="res://Furniture/lamp_standing.gltf" id="11_if7pe"]
 [ext_resource type="PackedScene" uid="uid://dwxa5yto3urf" path="res://Furniture/couch_pillows.gltf" id="12_1ha7i"]
+[ext_resource type="Resource" uid="uid://b4f81qqkoik" path="res://Blueprints/basics/l_house.tres" id="12_48sdh"]
 [ext_resource type="PackedScene" uid="uid://cbxv3n2lfwom1" path="res://Furniture/armchair.gltf" id="13_kphux"]
 [ext_resource type="PackedScene" uid="uid://bsn62ssxy77fb" path="res://Furniture/armchair_pillows.gltf" id="14_bvar2"]
 [ext_resource type="PackedScene" uid="uid://budin5eprqfba" path="res://Furniture/cabinet_small_decorated.gltf" id="14_vuffu"]
@@ -92,7 +92,7 @@ house_config = ExtResource("5_72lef")
 [node name="House2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50)
 script = ExtResource("4_1w18o")
-house_config = ExtResource("5_8f7lk")
+house_config = ExtResource("12_48sdh")
 
 [node name="House3" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.307686, 3.8147e-06, -30.6748)

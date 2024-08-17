@@ -64,6 +64,8 @@ func build():
 			build_floor(f)
 		for c in house_config.ceilings:
 			build_ceiling(c)
+		for r in house_config.roofs:
+			build_roof(r)
 		
 		#for mesh in get_children():
 				#mesh.owner = owner
@@ -209,5 +211,62 @@ func build_ceiling(ceiling_config:Floor_Config):
 	if editing and hide_ceilings:
 		ceiling.visible = false
 
+func build_roof(roof_config:Roof_Config):
+	var roof_mesh = ArrayMesh.new()
+	var sf_arrays = []
+	sf_arrays.resize(Mesh.ARRAY_MAX)
+	sf_arrays[Mesh.ARRAY_VERTEX] = PackedVector3Array()
+	sf_arrays[Mesh.ARRAY_INDEX] = PackedInt32Array()
+	var perimeter : PackedVector3Array = []
+	var interior : PackedVector3Array = []
+	var perim_inter_connect = [] #perimeter and interior connections , so we can fill in the gaps in the roof
+	for i in roof_config.perimeter.size():
+		perim_inter_connect.append({})
+	for p in roof_config.perimeter:
+		var top_pos = house_config.pillars[p].get_top_position()
+		perimeter.append(top_pos)
+		sf_arrays[Mesh.ARRAY_VERTEX].append(top_pos)
+	for p in roof_config.interior:
+		var top_pos = house_config.pillars[p].get_top_position()
+		interior.append(top_pos)
+		sf_arrays[Mesh.ARRAY_VERTEX].append(top_pos)
+	
+	for curr_id in perimeter.size():
+		sf_arrays[Mesh.ARRAY_INDEX].append(curr_id)
+		var next_id = curr_id+1
+		if next_id == perimeter.size():
+			next_id = 0
+		sf_arrays[Mesh.ARRAY_INDEX].append(next_id)
+		var mid_point = (perimeter[curr_id] + perimeter[next_id])/2
+		var closest_interior = 0
+		for i in range(1,interior.size()):
+			if interior[i].distance_to(mid_point) < interior[closest_interior].distance_to(mid_point):
+				closest_interior = i
+		closest_interior+=perimeter.size()
+		sf_arrays[Mesh.ARRAY_INDEX].append(closest_interior)
+		perim_inter_connect[curr_id][closest_interior] = true
+		perim_inter_connect[next_id][closest_interior] = true
+		
+	for perim_id in perim_inter_connect.size():
+		var connections = perim_inter_connect[perim_id]
+		if connections.size() == 2:
+			var keys = connections.keys()
+			keys.reverse()
+			for inter_id in keys:
+				sf_arrays[Mesh.ARRAY_INDEX].append(int(inter_id))
+			sf_arrays[Mesh.ARRAY_INDEX].append(int(perim_id))
+		elif connections.size() > 2:
+			printerr("Dont know how to handle more than 2 connections")
+		
+	print(sf_arrays[Mesh.ARRAY_INDEX])
+	roof_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,sf_arrays)
+	roof_mesh.surface_set_material(0,roof_config.material)
+	
+	var mi = CSGMesh3D.new()
+	mi.mesh = roof_mesh
+	add_child(mi)
+	mi.name = "Roof"
+	#mi.owner = owner
+	
 func _on_visibility_changed():
 	build()

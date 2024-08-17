@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="House_Config" load_steps=26 format=3 uid="uid://b4f81qqkoik"]
+[gd_resource type="Resource" script_class="House_Config" load_steps=31 format=3 uid="uid://b4f81qqkoik"]
 
 [ext_resource type="Script" path="res://House/Floor_Config.gd" id="1_6sx8u"]
 [ext_resource type="Script" path="res://House/Pillar/Pillar_Config.gd" id="2_38m7j"]
+[ext_resource type="Material" uid="uid://dcjxc15k81xrl" path="res://Material/Bricks/material_3d.tres" id="3_mc8ds"]
 [ext_resource type="Script" path="res://House/House_Config.gd" id="3_nskqo"]
+[ext_resource type="Script" path="res://House/Roof/Roof_Config.gd" id="3_nv3qv"]
 [ext_resource type="Script" path="res://House/Window/Window_Config.gd" id="4_4kajn"]
 [ext_resource type="Script" path="res://House/Wall/Wall_Config.gd" id="5_qy2xf"]
 
@@ -20,7 +22,7 @@ scale = 1.0
 
 [sub_resource type="Resource" id="Resource_u7utl"]
 script = ExtResource("2_38m7j")
-position = Vector3(11.5, 0, 15)
+position = Vector3(11.6479, 0, 15)
 height = 3.0
 width = 0.5
 
@@ -59,6 +61,24 @@ script = ExtResource("2_38m7j")
 position = Vector3(-9.5, 0, -5.5)
 height = 3.0
 width = 0.5
+
+[sub_resource type="Resource" id="Resource_hw01i"]
+script = ExtResource("2_38m7j")
+position = Vector3(6.41788, 0, 7.7928)
+height = 6.0
+width = 0.5
+
+[sub_resource type="Resource" id="Resource_32cy5"]
+script = ExtResource("2_38m7j")
+position = Vector3(6.94388, 0, -8.25268)
+height = 6.0
+width = 0.5
+
+[sub_resource type="Resource" id="Resource_tsour"]
+script = ExtResource("3_nv3qv")
+perimeter = PackedInt32Array(0, 4, 1, 2, 6, 5, 3)
+interior = PackedInt32Array(7, 8)
+material = ExtResource("3_mc8ds")
 
 [sub_resource type="Resource" id="Resource_buov4"]
 script = ExtResource("4_4kajn")
@@ -152,7 +172,8 @@ wall_details = Array[Resource("res://House/Window/WallDetail_Config.gd")]([])
 
 [resource]
 script = ExtResource("3_nskqo")
-pillars = Array[ExtResource("2_38m7j")]([SubResource("Resource_u7utl"), SubResource("Resource_kcsca"), SubResource("Resource_hwn6h"), SubResource("Resource_tmqwf"), SubResource("Resource_owe2f"), SubResource("Resource_mtmb8"), SubResource("Resource_6lk1j")])
+pillars = Array[ExtResource("2_38m7j")]([SubResource("Resource_u7utl"), SubResource("Resource_kcsca"), SubResource("Resource_hwn6h"), SubResource("Resource_tmqwf"), SubResource("Resource_owe2f"), SubResource("Resource_mtmb8"), SubResource("Resource_6lk1j"), SubResource("Resource_hw01i"), SubResource("Resource_32cy5")])
 walls = Array[ExtResource("5_qy2xf")]([SubResource("Resource_v5dxr"), SubResource("Resource_oykx7"), SubResource("Resource_4n0w4"), SubResource("Resource_tw01h"), SubResource("Resource_ar5b4"), SubResource("Resource_n2rq2"), SubResource("Resource_c3bkh")])
 floors = Array[ExtResource("1_6sx8u")]([SubResource("Resource_d86ma"), SubResource("Resource_uy5vf")])
 ceilings = Array[ExtResource("1_6sx8u")]([])
+roofs = Array[ExtResource("3_nv3qv")]([SubResource("Resource_tsour")])

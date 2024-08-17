@@ -29,4 +29,11 @@ class_name House_Config
 		for c in ceilings:
 			c.changed.connect(emit_changed)
 		emit_changed()
+
+@export var roofs : Array[Roof_Config] :
+	set(value):
+		roofs = value
+		for r in roofs:
+			r.changed.connect(emit_changed)
+		emit_changed()
 	

@@ -22,4 +22,7 @@ class_name Pillar_Config
 		material = value
 		emit_changed()
 		
-
+func get_top_position():
+	var top_pos = position
+	top_pos.y += height
+	return top_pos

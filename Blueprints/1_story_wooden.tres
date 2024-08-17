@@ -186,3 +186,4 @@ pillars = Array[ExtResource("2_rlphy")]([SubResource("Resource_6qxks"), SubResou
 walls = Array[ExtResource("5_8xgmm")]([SubResource("Resource_juoiw"), SubResource("Resource_e37al"), SubResource("Resource_gi2rl"), SubResource("Resource_dslxt"), SubResource("Resource_s0yh2")])
 floors = Array[ExtResource("2_46j0j")]([SubResource("Resource_eq8f0")])
 ceilings = Array[ExtResource("2_46j0j")]([SubResource("Resource_todxg")])
+roofs = Array[Resource("res://House/Roof/Roof_Config.gd")]([])
