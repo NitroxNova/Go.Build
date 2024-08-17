@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://jvaafqfhp84f"
-path="res://.godot/imported/lamp_standing.gltf-1817644f8b4d4e973783482050038195.scn"
+path="res://.godot/imported/lamp_standing.gltf-1f853f650728e9e941a8670990b258a2.scn"
 
 [deps]
 
-source_file="res://Furniture/lamp_standing.gltf"
-dest_files=["res://.godot/imported/lamp_standing.gltf-1817644f8b4d4e973783482050038195.scn"]
+source_file="res://addons/HomeMaker/Furniture/lamp_standing.gltf"
+dest_files=["res://.godot/imported/lamp_standing.gltf-1f853f650728e9e941a8670990b258a2.scn"]
 
 [params]
 

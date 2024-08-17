@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ke3rfm2kesb4"
-path="res://.godot/imported/bed_double_B.gltf-333a92e2f82bd44a7bfa7fc8739b3496.scn"
+path="res://.godot/imported/bed_double_B.gltf-81e728937220582d4b0dcdfa8509492a.scn"
 
 [deps]
 
-source_file="res://Furniture/bed_double_B.gltf"
-dest_files=["res://.godot/imported/bed_double_B.gltf-333a92e2f82bd44a7bfa7fc8739b3496.scn"]
+source_file="res://addons/HomeMaker/Furniture/bed_double_B.gltf"
+dest_files=["res://.godot/imported/bed_double_B.gltf-81e728937220582d4b0dcdfa8509492a.scn"]
 
 [params]
 

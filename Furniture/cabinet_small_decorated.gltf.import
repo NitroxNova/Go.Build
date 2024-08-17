@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://budin5eprqfba"
-path="res://.godot/imported/cabinet_small_decorated.gltf-90d89a7b90dd9944b64f9f1a7822c6a8.scn"
+path="res://.godot/imported/cabinet_small_decorated.gltf-e3b760619e4729ba0826c5883565be9f.scn"
 
 [deps]
 
-source_file="res://Furniture/cabinet_small_decorated.gltf"
-dest_files=["res://.godot/imported/cabinet_small_decorated.gltf-90d89a7b90dd9944b64f9f1a7822c6a8.scn"]
+source_file="res://addons/HomeMaker/Furniture/cabinet_small_decorated.gltf"
+dest_files=["res://.godot/imported/cabinet_small_decorated.gltf-e3b760619e4729ba0826c5883565be9f.scn"]
 
 [params]
 

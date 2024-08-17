@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dwxa5yto3urf"
-path="res://.godot/imported/couch_pillows.gltf-bb428e675bcb64730221600205f428cf.scn"
+path="res://.godot/imported/couch_pillows.gltf-664d0353a14620a38a0ffd912f8dcf73.scn"
 
 [deps]
 
-source_file="res://Furniture/couch_pillows.gltf"
-dest_files=["res://.godot/imported/couch_pillows.gltf-bb428e675bcb64730221600205f428cf.scn"]
+source_file="res://addons/HomeMaker/Furniture/couch_pillows.gltf"
+dest_files=["res://.godot/imported/couch_pillows.gltf-664d0353a14620a38a0ffd912f8dcf73.scn"]
 
 [params]
 

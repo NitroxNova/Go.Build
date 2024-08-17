@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cbxv3n2lfwom1"
-path="res://.godot/imported/armchair.gltf-dd1c11a07c9b0cb6318ec79964c9d1c1.scn"
+path="res://.godot/imported/armchair.gltf-0d573e5d52af9c1ace3476e1df731906.scn"
 
 [deps]
 
-source_file="res://Furniture/armchair.gltf"
-dest_files=["res://.godot/imported/armchair.gltf-dd1c11a07c9b0cb6318ec79964c9d1c1.scn"]
+source_file="res://addons/HomeMaker/Furniture/armchair.gltf"
+dest_files=["res://.godot/imported/armchair.gltf-0d573e5d52af9c1ace3476e1df731906.scn"]
 
 [params]
 

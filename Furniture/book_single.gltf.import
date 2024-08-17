@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://2mpbjk5mfksn"
-path="res://.godot/imported/book_single.gltf-f30ee2ae1c1dc4d782c781fdae8692a1.scn"
+path="res://.godot/imported/book_single.gltf-d2c813c0406b32f759ba5b089108d0a6.scn"
 
 [deps]
 
-source_file="res://Furniture/book_single.gltf"
-dest_files=["res://.godot/imported/book_single.gltf-f30ee2ae1c1dc4d782c781fdae8692a1.scn"]
+source_file="res://addons/HomeMaker/Furniture/book_single.gltf"
+dest_files=["res://.godot/imported/book_single.gltf-d2c813c0406b32f759ba5b089108d0a6.scn"]
 
 [params]
 

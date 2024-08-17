@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ipcoecu563l"]
+
+[ext_resource type="Texture2D" uid="uid://brvaxtpktmjfk" path="res://addons/HomeMaker/Material/Normals/FastNoiseAlbedo.tres" id="1_vi8l0"]
+[ext_resource type="Texture2D" uid="uid://c0aix54wab4kd" path="res://addons/HomeMaker/Material/Normals/FastNoise.tres" id="2_scfgt"]
+
+[resource]
+resource_name = "ToonMetal"
+cull_mode = 2
+albedo_color = Color(0.63101, 0.614641, 0.599277, 1)
+albedo_texture = ExtResource("1_vi8l0")
+metallic = 0.89
+metallic_specular = 0.55
+roughness = 0.2
+normal_enabled = true
+normal_scale = 1.5
+normal_texture = ExtResource("2_scfgt")
+uv1_triplanar = true

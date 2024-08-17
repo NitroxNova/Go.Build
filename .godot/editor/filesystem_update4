@@ -1,8 +1,0 @@
-res://House/house_editor.gd
-res://main.tscn
-res://Material/Normals/FastNoise.tres
-res://Material/Bricks/material_3d.tres
-res://Blueprints/1_story_wooden.tres
-res://Blueprints/2_story_brick.tres
-res://Blueprints/basics/l_house.tres
-res://Furniture/materials/furniture_texture.tres

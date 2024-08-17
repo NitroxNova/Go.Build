@@ -1,0 +1,34 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://8bi317gxhbb5"]
+
+[ext_resource type="Texture2D" uid="uid://c0aix54wab4kd" path="res://addons/HomeMaker/Material/Normals/FastNoise.tres" id="1_s652p"]
+
+[sub_resource type="Gradient" id="Gradient_xvrlq"]
+offsets = PackedFloat32Array(0, 0.531722)
+colors = PackedColorArray(0.601223, 0.601223, 0.601223, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_3wfja"]
+noise_type = 0
+frequency = 0.0075
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_icr2t"]
+seamless = true
+color_ramp = SubResource("Gradient_xvrlq")
+noise = SubResource("FastNoiseLite_3wfja")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_y4rsj"]
+seamless = true
+color_ramp = SubResource("Gradient_xvrlq")
+noise = SubResource("FastNoiseLite_3wfja")
+
+[resource]
+resource_name = "GoldToon"
+albedo_color = Color(0.931583, 0.823449, 0.248339, 1)
+albedo_texture = SubResource("NoiseTexture2D_icr2t")
+metallic = 0.7
+roughness = 0.35
+roughness_texture = SubResource("NoiseTexture2D_y4rsj")
+normal_enabled = true
+normal_scale = 0.2
+normal_texture = ExtResource("1_s652p")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true

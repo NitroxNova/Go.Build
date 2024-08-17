@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd4nf277il85s"]
+
+[ext_resource type="Material" uid="uid://dcjxc15k81xrl" path="res://addons/HomeMaker/Material/Bricks/material_3d.tres" id="1_45pil"]
+
+[node name="Cut_Out_Door" type="CSGCombiner3D"]
+operation = 2
+
+[node name="CSGCombiner3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00229612, 0)
+size = Vector3(1.8, 1.902, 2.5)
+material = ExtResource("1_45pil")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0.948576, 0)
+radius = 1.255
+height = 2.29245
+sides = 10
+material = ExtResource("1_45pil")

@@ -2,12 +2,12 @@
 extends Node3D
 class_name HouseEditor
 
-var pillar_scene = preload("res://House/Pillar/pillar.tscn")
-var wall_scene = preload("res://House/Wall/wall.tscn")
-var window_scene = preload("res://House/Window/window.glb")
-var window_cutout_scene = preload("res://House/Window/cut_out.tscn")
-var door_scene = preload("res://House/Window/door.tscn")
-var door_cutout_scene = preload("res://House/Window/cut_out_door.tscn")
+var pillar_scene = preload("res://addons/HomeMaker/House/Pillar/pillar.tscn")
+var wall_scene = preload("res://addons/HomeMaker/House/Wall/wall.tscn")
+var window_scene = preload("res://addons/HomeMaker/Models/window.glb")
+var window_cutout_scene = preload("res://addons/HomeMaker/cut_outs/cut_out.tscn")
+var door_scene = preload("res://addons/HomeMaker/Models/ModelsScenes/door.tscn")
+var door_cutout_scene = preload("res://addons/HomeMaker/cut_outs/cut_out_door.tscn")
 
 @export var editing : bool = false :
 	set(value):
@@ -227,7 +227,7 @@ func build_roof(roof_config:Roof_Config):
 		perimeter.append(top_pos)
 		sf_arrays[Mesh.ARRAY_VERTEX].append(top_pos)
 	for p in roof_config.interior:
-		var top_pos = house_config.pillars[p].get_top_position()
+		var top_pos = house_config.pillars[p].get_top_position() + (Vector3.UP * 0.1)
 		interior.append(top_pos)
 		sf_arrays[Mesh.ARRAY_VERTEX].append(top_pos)
 	

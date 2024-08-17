@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b2cgg0gehx5sy"]
 
-[ext_resource type="Script" path="res://House/Pillar/pillar.gd" id="1_whtra"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Pillar/pillar.gd" id="1_whtra"]
 
 [node name="Pillar" type="Node3D"]
 script = ExtResource("1_whtra")

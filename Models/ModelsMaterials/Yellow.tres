@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b3saob63dv2gv"]
+
+[ext_resource type="Texture2D" uid="uid://ducn7kehdh72k" path="res://addons/HomeMaker/Material/Stucco/white_stucco.png" id="1_b6qc3"]
+[ext_resource type="Texture2D" uid="uid://c0aix54wab4kd" path="res://addons/HomeMaker/Material/Normals/FastNoise.tres" id="2_ejeui"]
+
+[resource]
+resource_name = "Yellow"
+cull_mode = 2
+albedo_color = Color(0.799228, 0.727348, 7.70092e-07, 1)
+albedo_texture = ExtResource("1_b6qc3")
+metallic = 0.2
+metallic_specular = 0.0
+roughness = 0.8
+normal_enabled = true
+normal_scale = 0.35
+normal_texture = ExtResource("2_ejeui")
+uv1_triplanar = true

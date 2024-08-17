@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://c5d6f4a6boapu"]
+
+[ext_resource type="Texture2D" uid="uid://dlu8rlwwtewkk" path="res://addons/HomeMaker/Material/Bricks_Gray/Bricks076C_1K-JPG_Color.jpg" id="1_s7ius"]
+[ext_resource type="Texture2D" uid="uid://cdq8mhdeimdgv" path="res://addons/HomeMaker/Material/Bricks_Gray/Bricks076C_1K-JPG_AmbientOcclusion.jpg" id="2_jyh2d"]
+[ext_resource type="Texture2D" uid="uid://dntnqk6d0ddpe" path="res://addons/HomeMaker/Material/Bricks_Gray/Bricks076C_1K-JPG_NormalGL.jpg" id="3_7rlbd"]
+[ext_resource type="Texture2D" uid="uid://cfxvh74ug0hik" path="res://addons/HomeMaker/Material/Bricks_Gray/Bricks076C_1K-JPG_Roughness.jpg" id="4_e2blb"]
+
+[resource]
+albedo_color = Color(0.93845, 0.93845, 0.93845, 1)
+albedo_texture = ExtResource("1_s7ius")
+metallic = 0.5
+metallic_specular = 0.36
+roughness = 0.8
+roughness_texture = ExtResource("4_e2blb")
+normal_enabled = true
+normal_texture = ExtResource("3_7rlbd")
+ao_enabled = true
+ao_light_affect = 0.3
+ao_texture = ExtResource("2_jyh2d")
+uv1_scale = Vector3(0.3, 0.3, 0.3)
+uv1_triplanar = true

@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dcjxc15k81xrl"]
 
-[ext_resource type="Texture2D" uid="uid://4xwt6vxckfm" path="res://Material/Bricks/Bricks012_1K_Color.jpg" id="1_hd4y6"]
-[ext_resource type="Texture2D" uid="uid://c0aix54wab4kd" path="res://Material/Normals/FastNoise.tres" id="2_5cjoh"]
+[ext_resource type="Texture2D" uid="uid://4xwt6vxckfm" path="res://addons/HomeMaker/Material/Bricks/Bricks012_1K_Color.jpg" id="1_hd4y6"]
+[ext_resource type="Texture2D" uid="uid://c0aix54wab4kd" path="res://addons/HomeMaker/Material/Normals/FastNoise.tres" id="2_5cjoh"]
 
 [resource]
 albedo_texture = ExtResource("1_hd4y6")

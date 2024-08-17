@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5lx8pjnogjs5"]
-
-[ext_resource type="Material" uid="uid://dcjxc15k81xrl" path="res://Material/Bricks/material_3d.tres" id="1_2wibn"]
-
-[node name="Cut_Out_Door" type="CSGBox3D"]
-operation = 2
-size = Vector3(1.805, 2.80957, 1.6)
-material = ExtResource("1_2wibn")

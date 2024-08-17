@@ -1,16 +1,17 @@
-[gd_resource type="Resource" script_class="House_Config" load_steps=43 format=3 uid="uid://dveuhwoq8vkbv"]
+[gd_resource type="Resource" script_class="House_Config" load_steps=45 format=3 uid="uid://dveuhwoq8vkbv"]
 
-[ext_resource type="Script" path="res://House/Floor_Config.gd" id="1_awj6e"]
-[ext_resource type="Material" uid="uid://ctldtf7s0t7fr" path="res://Material/BricksRock/BricksRock.tres" id="1_njsuu"]
-[ext_resource type="Script" path="res://House/Pillar/Pillar_Config.gd" id="2_2psll"]
-[ext_resource type="Material" uid="uid://cr0pyia4tfjfo" path="res://Material/Stucco/white_stucco.tres" id="3_6waee"]
-[ext_resource type="Script" path="res://House/House_Config.gd" id="3_55xed"]
-[ext_resource type="Script" path="res://House/Wall/Wall_Config.gd" id="4_xojui"]
-[ext_resource type="Script" path="res://House/Window/Window_Config.gd" id="4_ycqqq"]
-[ext_resource type="Script" path="res://House/Window/WallDetail_Config.gd" id="9_8js8s"]
-[ext_resource type="PackedScene" uid="uid://bqmcu4jvd81g5" path="res://House/Window/cut_out_door_rounded.tscn" id="10_qtxnu"]
-[ext_resource type="PackedScene" uid="uid://dqd6h3minc5wy" path="res://House/Window/cut_out.tscn" id="11_2bekd"]
-[ext_resource type="Script" path="res://House/Window/WallDetail.gd" id="11_6e2lk"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Floor_Config.gd" id="1_awj6e"]
+[ext_resource type="Material" uid="uid://ctldtf7s0t7fr" path="res://addons/HomeMaker/Material/BricksRock/BricksRock.tres" id="1_njsuu"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Pillar/Pillar_Config.gd" id="2_2psll"]
+[ext_resource type="Material" uid="uid://cr0pyia4tfjfo" path="res://addons/HomeMaker/Material/Stucco/white_stucco.tres" id="3_6waee"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/House_Config.gd" id="3_55xed"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Wall/Wall_Config.gd" id="4_xojui"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Window/Window_Config.gd" id="4_ycqqq"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Roof/Roof_Config.gd" id="5_lvqlh"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Window/WallDetail_Config.gd" id="9_8js8s"]
+[ext_resource type="PackedScene" uid="uid://bqmcu4jvd81g5" path="res://addons/HomeMaker/cut_outs/cut_out_window_medieval_rounded.tscn" id="10_qtxnu"]
+[ext_resource type="PackedScene" uid="uid://dqd6h3minc5wy" path="res://addons/HomeMaker/cut_outs/cut_out.tscn" id="11_2bekd"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Window/WallDetail.gd" id="11_6e2lk"]
 
 [sub_resource type="Resource" id="Resource_my68l"]
 script = ExtResource("1_awj6e")
@@ -95,6 +96,11 @@ position = Vector3(-7, 0, 5)
 height = 3.5
 width = 0.5
 material = ExtResource("3_6waee")
+
+[sub_resource type="Resource" id="Resource_eabhl"]
+script = ExtResource("5_lvqlh")
+perimeter = PackedInt32Array()
+interior = PackedInt32Array()
 
 [sub_resource type="Resource" id="Resource_buov4"]
 script = ExtResource("4_ycqqq")
@@ -250,3 +256,4 @@ pillars = Array[ExtResource("2_2psll")]([SubResource("Resource_a3xas"), SubResou
 walls = Array[ExtResource("4_xojui")]([SubResource("Resource_salcy"), SubResource("Resource_qb4ed"), SubResource("Resource_oud8o"), SubResource("Resource_awj23"), SubResource("Resource_3wktj"), SubResource("Resource_akm1s"), SubResource("Resource_vtf2n"), SubResource("Resource_vwhh1")])
 floors = Array[ExtResource("1_awj6e")]([SubResource("Resource_my68l"), SubResource("Resource_y3y8h"), SubResource("Resource_0611c"), SubResource("Resource_qimce")])
 ceilings = Array[ExtResource("1_awj6e")]([])
+roofs = Array[ExtResource("5_lvqlh")]([SubResource("Resource_eabhl")])

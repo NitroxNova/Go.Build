@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="WallDetail" load_steps=4 format=3 uid="uid://dgiklpo2ie0o1"]
 
-[ext_resource type="Script" path="res://House/Window/WallDetail.gd" id="1_6wpea"]
-[ext_resource type="PackedScene" uid="uid://dqd6h3minc5wy" path="res://House/Window/cut_out.tscn" id="1_vmj3q"]
-[ext_resource type="PackedScene" uid="uid://6723hxge28wg" path="res://House/Window/window.glb" id="2_gx05x"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Window/WallDetail.gd" id="1_6wpea"]
+[ext_resource type="PackedScene" uid="uid://dqd6h3minc5wy" path="res://addons/HomeMaker/cut_outs/cut_out.tscn" id="1_vmj3q"]
+[ext_resource type="PackedScene" uid="uid://6723hxge28wg" path="res://addons/HomeMaker/Models/window.glb" id="2_gx05x"]
 
 [resource]
 script = ExtResource("1_6wpea")

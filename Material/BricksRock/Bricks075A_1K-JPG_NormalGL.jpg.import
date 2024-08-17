@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1j246atasvrm"
-path.s3tc="res://.godot/imported/Bricks075A_1K-JPG_NormalGL.jpg-4908bf45a8192431ce857d131b0922e9.s3tc.ctex"
+path.s3tc="res://.godot/imported/Bricks075A_1K-JPG_NormalGL.jpg-a15de31368088fe5a44e32bf3a837809.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Material/BricksRock/Bricks075A_1K-JPG_NormalGL.jpg"
-dest_files=["res://.godot/imported/Bricks075A_1K-JPG_NormalGL.jpg-4908bf45a8192431ce857d131b0922e9.s3tc.ctex"]
+source_file="res://addons/HomeMaker/Material/BricksRock/Bricks075A_1K-JPG_NormalGL.jpg"
+dest_files=["res://.godot/imported/Bricks075A_1K-JPG_NormalGL.jpg-a15de31368088fe5a44e32bf3a837809.s3tc.ctex"]
 
 [params]
 
