@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3ck3876mxw7i"
 path.s3tc="res://.godot/imported/Rock010_1K-JPG_Roughness.jpg-f31f183b8147c15465df854f1dc02364.s3tc.ctex"
+path.etc2="res://.godot/imported/Rock010_1K-JPG_Roughness.jpg-f31f183b8147c15465df854f1dc02364.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/HomeMaker/Material/Rock010/Rock010_1K-JPG_Roughness.jpg"
-dest_files=["res://.godot/imported/Rock010_1K-JPG_Roughness.jpg-f31f183b8147c15465df854f1dc02364.s3tc.ctex"]
+dest_files=["res://.godot/imported/Rock010_1K-JPG_Roughness.jpg-f31f183b8147c15465df854f1dc02364.s3tc.ctex", "res://.godot/imported/Rock010_1K-JPG_Roughness.jpg-f31f183b8147c15465df854f1dc02364.etc2.ctex"]
 
 [params]
 

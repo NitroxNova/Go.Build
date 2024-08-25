@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ducn7kehdh72k"
 path.s3tc="res://.godot/imported/white_stucco.png-1a2daf863fc1c1eb318bfef485bf59dc.s3tc.ctex"
+path.etc2="res://.godot/imported/white_stucco.png-1a2daf863fc1c1eb318bfef485bf59dc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/HomeMaker/Material/Stucco/white_stucco.png"
-dest_files=["res://.godot/imported/white_stucco.png-1a2daf863fc1c1eb318bfef485bf59dc.s3tc.ctex"]
+dest_files=["res://.godot/imported/white_stucco.png-1a2daf863fc1c1eb318bfef485bf59dc.s3tc.ctex", "res://.godot/imported/white_stucco.png-1a2daf863fc1c1eb318bfef485bf59dc.etc2.ctex"]
 
 [params]
 

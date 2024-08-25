@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="House_Config" load_steps=56 format=3 uid="uid://dkj4jal2ug7rh"]
+[gd_resource type="Resource" script_class="House_Config" load_steps=57 format=3 uid="uid://dkj4jal2ug7rh"]
 
 [ext_resource type="Material" uid="uid://cr0pyia4tfjfo" path="res://addons/HomeMaker/Material/Stucco/white_stucco.tres" id="1_ty33s"]
 [ext_resource type="Script" path="res://addons/HomeMaker/House/Floor_Config.gd" id="2_46j0j"]
@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://dcjxc15k81xrl" path="res://addons/HomeMaker/Material/Bricks/material_3d.tres" id="3_t5mym"]
 [ext_resource type="Material" uid="uid://wb7b12htur4g" path="res://addons/HomeMaker/Material/Planks/material_3d.tres" id="4_q811r"]
 [ext_resource type="Script" path="res://addons/HomeMaker/House/Pillar/Pillar_Config.gd" id="5_y7uif"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Roof/Roof_Config.gd" id="6_6hx74"]
 [ext_resource type="Material" uid="uid://ctldtf7s0t7fr" path="res://addons/HomeMaker/Material/BricksRock/BricksRock.tres" id="6_du3v1"]
 [ext_resource type="Material" uid="uid://bi4o5cqdj3n2x" path="res://addons/HomeMaker/Material/Blue_Stripes/material_3d.tres" id="6_v1o6s"]
 [ext_resource type="Material" uid="uid://c5d6f4a6boapu" path="res://addons/HomeMaker/Material/Bricks_Gray/BricksRockGray.tres" id="8_bixdu"]
@@ -242,4 +243,4 @@ pillars = Array[ExtResource("5_y7uif")]([SubResource("Resource_6qxks"), SubResou
 walls = Array[ExtResource("8_kbmcw")]([SubResource("Resource_juoiw"), SubResource("Resource_e37al"), SubResource("Resource_gi2rl"), SubResource("Resource_dslxt"), SubResource("Resource_s0yh2")])
 floors = Array[ExtResource("2_46j0j")]([SubResource("Resource_eq8f0")])
 ceilings = Array[ExtResource("2_46j0j")]([SubResource("Resource_todxg")])
-roofs = Array[Resource("res://addons/HomeMaker/House/Roof/Roof_Config.gd")]([])
+roofs = Array[ExtResource("6_6hx74")]([])

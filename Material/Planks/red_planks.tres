@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c0aix54wab4kd" path="res://addons/HomeMaker/Material/Normals/FastNoise.tres" id="2_1oxkx"]
 
 [resource]
-albedo_color = Color(0.498039, 0, 0, 1)
+albedo_color = Color(0.58569, 0.000778864, 0.000426246, 1)
 albedo_texture = ExtResource("1_4spnv")
 metallic = 0.6
 roughness = 0.7

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dntnqk6d0ddpe"
 path.s3tc="res://.godot/imported/Bricks076C_1K-JPG_NormalGL.jpg-65bd12db66f7ec0fa8d0ce57c61a396c.s3tc.ctex"
+path.etc2="res://.godot/imported/Bricks076C_1K-JPG_NormalGL.jpg-65bd12db66f7ec0fa8d0ce57c61a396c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/HomeMaker/Material/Bricks_Gray/Bricks076C_1K-JPG_NormalGL.jpg"
-dest_files=["res://.godot/imported/Bricks076C_1K-JPG_NormalGL.jpg-65bd12db66f7ec0fa8d0ce57c61a396c.s3tc.ctex"]
+dest_files=["res://.godot/imported/Bricks076C_1K-JPG_NormalGL.jpg-65bd12db66f7ec0fa8d0ce57c61a396c.s3tc.ctex", "res://.godot/imported/Bricks076C_1K-JPG_NormalGL.jpg-65bd12db66f7ec0fa8d0ce57c61a396c.etc2.ctex"]
 
 [params]
 

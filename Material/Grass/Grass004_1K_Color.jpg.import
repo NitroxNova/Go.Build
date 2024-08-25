@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://deuic3iknnuf2"
 path.s3tc="res://.godot/imported/Grass004_1K_Color.jpg-3b0df78e6723afcc159b5c721c87264d.s3tc.ctex"
+path.etc2="res://.godot/imported/Grass004_1K_Color.jpg-3b0df78e6723afcc159b5c721c87264d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/HomeMaker/Material/Grass/Grass004_1K_Color.jpg"
-dest_files=["res://.godot/imported/Grass004_1K_Color.jpg-3b0df78e6723afcc159b5c721c87264d.s3tc.ctex"]
+dest_files=["res://.godot/imported/Grass004_1K_Color.jpg-3b0df78e6723afcc159b5c721c87264d.s3tc.ctex", "res://.godot/imported/Grass004_1K_Color.jpg-3b0df78e6723afcc159b5c721c87264d.etc2.ctex"]
 
 [params]
 
