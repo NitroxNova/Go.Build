@@ -52,7 +52,8 @@ func _ready():
 func build():
 	t0 = Time.get_ticks_msec()
 	if is_inside_tree() and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		selection = EditorInterface.get_selection()
+		if Engine.is_editor_hint():
+			selection = EditorInterface.get_selection()
 		clean_house()
 		for p_id in house_config.pillars.size():
 			build_pillar(p_id)
@@ -74,13 +75,14 @@ func build():
 
 
 func clean_house():
-	last_pid.clear()
-	last_wid.clear()
-	for n in selection.get_selected_nodes():
-		if n is Pillar:
-			last_pid.append(n.pillar_id)
-		if n is Wall:
-			last_wid.append(n.w_id)
+	if Engine.is_editor_hint():
+		last_pid.clear()
+		last_wid.clear()
+		for n in selection.get_selected_nodes():
+			if n is Pillar:
+				last_pid.append(n.pillar_id)
+			if n is Wall:
+				last_wid.append(n.w_id)
 	for child in get_children():
 		child.queue_free()
 
@@ -95,7 +97,8 @@ func build_pillar(p_id:int):
 	pillar.set_material(p_config.material)
 	add_child(pillar)
 	pillar.transform_changed.connect(pillar_transform_changed)
-	if editing:
+	
+	if Engine.is_editor_hint() and editing:
 		pillar.owner = owner
 		pillar.pillar_id = p_id
 		pillar.name = "Pillar_" + str(p_id) + "_" + str(pillar.position) +"   ; p   " + str(randi_range(0, 25))
@@ -167,7 +170,7 @@ func build_wall(wall_config:Wall_Config):
 			detail.position = wd_position
 			wall.add_child(detail)
 	add_child(wall)
-	if editing:
+	if Engine.is_editor_hint() and editing:
 		wall.owner = owner
 		wall.w_id = count
 		wall.name = "Wall_" + str(count) + "   <3   " + str(randi_range(0, 25))

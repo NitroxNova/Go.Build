@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://byexc7iwqmahw"
 path.s3tc="res://.godot/imported/Planks020_1K_Color.jpg-8ae1ecc3b54451b77512ca00fe76e274.s3tc.ctex"
+path.etc2="res://.godot/imported/Planks020_1K_Color.jpg-8ae1ecc3b54451b77512ca00fe76e274.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/HomeMaker/Material/Planks/Planks020_1K_Color.jpg"
-dest_files=["res://.godot/imported/Planks020_1K_Color.jpg-8ae1ecc3b54451b77512ca00fe76e274.s3tc.ctex"]
+dest_files=["res://.godot/imported/Planks020_1K_Color.jpg-8ae1ecc3b54451b77512ca00fe76e274.s3tc.ctex", "res://.godot/imported/Planks020_1K_Color.jpg-8ae1ecc3b54451b77512ca00fe76e274.etc2.ctex"]
 
 [params]
 

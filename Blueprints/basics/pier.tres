@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="House_Config" load_steps=15 format=3 uid="uid://com2c7ofjv7fs"]
+
+[ext_resource type="Material" uid="uid://wb7b12htur4g" path="res://addons/HomeMaker/Material/Planks/material_3d.tres" id="1_k35xv"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Floor_Config.gd" id="2_tmw2q"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Pillar/Pillar_Config.gd" id="3_besyg"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Roof/Roof_Config.gd" id="4_2rvb5"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/House_Config.gd" id="4_8ms1i"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Wall/Wall_Config.gd" id="6_s7yrv"]
+
+[sub_resource type="Resource" id="Resource_ixw63"]
+script = ExtResource("2_tmw2q")
+perimeter = PackedInt32Array(1, 0, 2, 3)
+thickness = 0.5
+material = ExtResource("1_k35xv")
+scale = 1.0
+
+[sub_resource type="Resource" id="Resource_j7vmf"]
+script = ExtResource("2_tmw2q")
+perimeter = PackedInt32Array(3, 2, 5, 4)
+thickness = 0.5
+material = ExtResource("1_k35xv")
+scale = 1.0
+
+[sub_resource type="Resource" id="Resource_m5a4s"]
+script = ExtResource("3_besyg")
+position = Vector3(0, 0, 10)
+height = 4.5
+width = 1.0
+material = ExtResource("1_k35xv")
+
+[sub_resource type="Resource" id="Resource_37ncb"]
+script = ExtResource("3_besyg")
+position = Vector3(0, 0, -10)
+height = 4.5
+width = 1.0
+material = ExtResource("1_k35xv")
+
+[sub_resource type="Resource" id="Resource_kpsbd"]
+script = ExtResource("3_besyg")
+position = Vector3(-25, -3, 10)
+height = 10.0
+width = 1.0
+material = ExtResource("1_k35xv")
+
+[sub_resource type="Resource" id="Resource_aa8ka"]
+script = ExtResource("3_besyg")
+position = Vector3(-25, -3, -10)
+height = 10.0
+width = 1.0
+material = ExtResource("1_k35xv")
+
+[sub_resource type="Resource" id="Resource_87mcc"]
+script = ExtResource("3_besyg")
+position = Vector3(-50, -5, -10)
+height = 10.0
+width = 1.0
+material = ExtResource("1_k35xv")
+
+[sub_resource type="Resource" id="Resource_8rsvb"]
+script = ExtResource("3_besyg")
+position = Vector3(-50, 0, 10)
+height = 6.0
+width = 1.0
+material = ExtResource("1_k35xv")
+
+[resource]
+script = ExtResource("4_8ms1i")
+pillars = Array[ExtResource("3_besyg")]([SubResource("Resource_m5a4s"), SubResource("Resource_37ncb"), SubResource("Resource_kpsbd"), SubResource("Resource_aa8ka"), SubResource("Resource_87mcc"), SubResource("Resource_8rsvb")])
+walls = Array[ExtResource("6_s7yrv")]([])
+floors = Array[ExtResource("2_tmw2q")]([])
+ceilings = Array[ExtResource("2_tmw2q")]([SubResource("Resource_ixw63"), SubResource("Resource_j7vmf")])
+roofs = Array[ExtResource("4_2rvb5")]([])
