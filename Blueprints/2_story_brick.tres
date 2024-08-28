@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="House_Config" load_steps=43 format=3 uid="uid://b7ujqot6l8ijp"]
+[gd_resource type="Resource" script_class="House_Config" load_steps=45 format=3 uid="uid://b7ujqot6l8ijp"]
 
 [ext_resource type="Material" uid="uid://cr0pyia4tfjfo" path="res://addons/HomeMaker/Material/Stucco/white_stucco.tres" id="1_e3sie"]
 [ext_resource type="Material" uid="uid://dcjxc15k81xrl" path="res://addons/HomeMaker/Material/Bricks/material_3d.tres" id="1_eoadj"]
@@ -7,8 +7,10 @@
 [ext_resource type="Script" path="res://addons/HomeMaker/House/House_Config.gd" id="4_ta3lu"]
 [ext_resource type="Script" path="res://addons/HomeMaker/House/Pillar/Pillar_Config.gd" id="5_sa1ns"]
 [ext_resource type="Material" uid="uid://bi4o5cqdj3n2x" path="res://addons/HomeMaker/Material/Blue_Stripes/material_3d.tres" id="5_x2wt1"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Roof/Roof_Config.gd" id="6_078jm"]
 [ext_resource type="Script" path="res://addons/HomeMaker/House/Window/Window_Config.gd" id="7_oxow6"]
 [ext_resource type="Script" path="res://addons/HomeMaker/House/Wall/Wall_Config.gd" id="9_c5exv"]
+[ext_resource type="Script" path="res://addons/HomeMaker/House/Window/WallDetail_Config.gd" id="11_m36al"]
 
 [sub_resource type="Resource" id="Resource_7847p"]
 script = ExtResource("2_4a6hx")
@@ -117,7 +119,7 @@ width = 1.0
 proportional_height = 0.995
 windows = Array[ExtResource("7_oxow6")]([SubResource("Resource_7bolp"), SubResource("Resource_ia6er")])
 doors = Array[ExtResource("7_oxow6")]([SubResource("Resource_bqene")])
-wall_details = Array[Resource("res://addons/HomeMaker/House/Window/WallDetail_Config.gd")]([])
+wall_details = Array[ExtResource("11_m36al")]([])
 material = ExtResource("1_eoadj")
 inner_material = ExtResource("5_x2wt1")
 
@@ -134,7 +136,7 @@ width = 1.0
 proportional_height = 0.995
 windows = Array[ExtResource("7_oxow6")]([SubResource("Resource_krea3")])
 doors = Array[ExtResource("7_oxow6")]([])
-wall_details = Array[Resource("res://addons/HomeMaker/House/Window/WallDetail_Config.gd")]([])
+wall_details = Array[ExtResource("11_m36al")]([])
 material = ExtResource("1_eoadj")
 inner_material = ExtResource("3_ttmps")
 
@@ -151,7 +153,7 @@ width = 1.0
 proportional_height = 0.995
 windows = Array[ExtResource("7_oxow6")]([SubResource("Resource_j623a")])
 doors = Array[ExtResource("7_oxow6")]([])
-wall_details = Array[Resource("res://addons/HomeMaker/House/Window/WallDetail_Config.gd")]([])
+wall_details = Array[ExtResource("11_m36al")]([])
 material = ExtResource("1_eoadj")
 inner_material = ExtResource("3_ttmps")
 
@@ -168,7 +170,7 @@ width = 1.0
 proportional_height = 0.995
 windows = Array[ExtResource("7_oxow6")]([SubResource("Resource_soipr")])
 doors = Array[ExtResource("7_oxow6")]([])
-wall_details = Array[Resource("res://addons/HomeMaker/House/Window/WallDetail_Config.gd")]([])
+wall_details = Array[ExtResource("11_m36al")]([])
 material = ExtResource("1_eoadj")
 inner_material = ExtResource("5_x2wt1")
 
@@ -185,7 +187,7 @@ width = 0.5
 proportional_height = 0.995
 windows = Array[ExtResource("7_oxow6")]([])
 doors = Array[ExtResource("7_oxow6")]([SubResource("Resource_6asy6")])
-wall_details = Array[Resource("res://addons/HomeMaker/House/Window/WallDetail_Config.gd")]([])
+wall_details = Array[ExtResource("11_m36al")]([])
 material = ExtResource("3_ttmps")
 inner_material = ExtResource("5_x2wt1")
 
@@ -202,7 +204,7 @@ width = 1.0
 proportional_height = 0.995
 windows = Array[ExtResource("7_oxow6")]([SubResource("Resource_6hnt4")])
 doors = Array[ExtResource("7_oxow6")]([])
-wall_details = Array[Resource("res://addons/HomeMaker/House/Window/WallDetail_Config.gd")]([])
+wall_details = Array[ExtResource("11_m36al")]([])
 material = ExtResource("3_ttmps")
 inner_material = ExtResource("5_x2wt1")
 
@@ -229,7 +231,7 @@ width = 1.0
 proportional_height = 0.995
 windows = Array[ExtResource("7_oxow6")]([SubResource("Resource_rsssu"), SubResource("Resource_l5rjj"), SubResource("Resource_j2bud")])
 doors = Array[ExtResource("7_oxow6")]([])
-wall_details = Array[Resource("res://addons/HomeMaker/House/Window/WallDetail_Config.gd")]([])
+wall_details = Array[ExtResource("11_m36al")]([])
 material = ExtResource("3_ttmps")
 inner_material = ExtResource("5_x2wt1")
 
@@ -251,7 +253,7 @@ width = 1.0
 proportional_height = 0.995
 windows = Array[ExtResource("7_oxow6")]([SubResource("Resource_lqpr3"), SubResource("Resource_sbcap")])
 doors = Array[ExtResource("7_oxow6")]([])
-wall_details = Array[Resource("res://addons/HomeMaker/House/Window/WallDetail_Config.gd")]([])
+wall_details = Array[ExtResource("11_m36al")]([])
 material = ExtResource("3_ttmps")
 inner_material = ExtResource("5_x2wt1")
 
@@ -261,4 +263,4 @@ pillars = Array[ExtResource("5_sa1ns")]([SubResource("Resource_p00ap"), SubResou
 walls = Array[ExtResource("9_c5exv")]([SubResource("Resource_5y214"), SubResource("Resource_d2i3w"), SubResource("Resource_ec647"), SubResource("Resource_pbq0f"), SubResource("Resource_tbu1s"), SubResource("Resource_y3cso"), SubResource("Resource_co550"), SubResource("Resource_yu3sp")])
 floors = Array[ExtResource("2_4a6hx")]([SubResource("Resource_w657x"), SubResource("Resource_3dkxs"), SubResource("Resource_s0xgf")])
 ceilings = Array[ExtResource("2_4a6hx")]([SubResource("Resource_7847p"), SubResource("Resource_2kp48")])
-roofs = Array[Resource("res://addons/HomeMaker/House/Roof/Roof_Config.gd")]([])
+roofs = Array[ExtResource("6_078jm")]([])
